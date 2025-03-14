@@ -5,12 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Creekside Technical Training Institute</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: rgba(0, 51, 102, 0.9);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .motto {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background: #00509E;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            background: #002D5E;
+        }
+        .about {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #003366;
+        }
+        p {
+            line-height: 1.6;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            .about {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-
         <h1>About Creekside Technical Training Institute</h1>
- <div class="motto">Learning Beyond Limits</div>
+        <div class="motto">Learning Beyond Limits</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
