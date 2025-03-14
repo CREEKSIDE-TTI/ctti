@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f4f4f4;
+            background: #f4f4f4;
         }
         header {
-            background: rgba(0, 51, 102, 0.9);
+            background: linear-gradient(to right, #003366, #00509E);
             color: white;
             text-align: center;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         .motto {
             font-size: 18px;
             font-weight: bold;
             margin-top: 5px;
+            font-style: italic;
+            color: #ffdd57;
         }
         nav ul {
             list-style: none;
@@ -42,34 +42,44 @@
         nav ul li a {
             text-decoration: none;
             color: white;
-            background: #00509E;
+            background: #ff8c00;
             padding: 10px 15px;
             border-radius: 5px;
             font-size: 16px;
+            transition: 0.3s ease-in-out;
         }
         nav ul li a:hover {
-            background: #002D5E;
+            background: #ff6600;
+            transform: scale(1.05);
         }
         .about {
             max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 30px auto;
+            padding: 25px;
             background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
         }
-        h2 {
+        .about h2 {
             color: #003366;
+            border-bottom: 3px solid #00509E;
+            display: inline-block;
+            padding-bottom: 5px;
         }
-        p {
-            line-height: 1.6;
+        .about p {
+            line-height: 1.8;
+            font-size: 17px;
         }
         footer {
             background: #003366;
             color: white;
             text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
         }
         @media (max-width: 768px) {
             nav ul {
@@ -78,7 +88,7 @@
                 gap: 10px;
             }
             .about {
-                padding: 15px;
+                padding: 20px;
             }
         }
     </style>
