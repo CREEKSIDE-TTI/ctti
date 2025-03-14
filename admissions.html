@@ -6,18 +6,20 @@
     <title>Admissions | Creekside Technical Training Institute</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background: #003366;
+            background: linear-gradient(to right, #003366, #00509E);
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
+            position: relative;
         }
         .nav {
             display: flex;
@@ -29,24 +31,65 @@
             color: white;
             text-decoration: none;
             font-size: 16px;
-            padding: 5px 10px;
+            padding: 8px 15px;
             border-radius: 5px;
-            background: #00509E;
+            background: #ff8c00;
+            transition: 0.3s ease-in-out;
         }
         .nav a:hover {
-            background: #002D5E;
+            background: #ff6600;
+            transform: scale(1.05);
         }
+
+        /* Mobile-Friendly Navigation */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        .menu-toggle:focus {
+            outline: none;
+        }
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            display: none;
+        }
+
+        /* Content Styling */
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
             background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
         }
         h2, h3 {
             color: #003366;
+            border-bottom: 3px solid #00509E;
+            display: inline-block;
+            padding-bottom: 5px;
         }
+        p, ul, ol {
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        /* Call-to-Action Button */
         .cta-button {
             display: block;
             width: 100%;
@@ -58,23 +101,51 @@
             font-size: 18px;
             border-radius: 5px;
             margin-top: 20px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
         }
         .cta-button:hover {
             background: #003366;
+            transform: scale(1.05);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-menu {
+                display: flex;
+            }
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Admissions</h1>
-        <div class="nav">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="courses.html">Courses</a>
             <a href="contact.html">Contact</a>
             <a href="https://eskooly.com/bb/StudentPortal/" target="_blank">Student Portal</a>
             <a href="https://eskooly.com/bb/EmployeePortal/" target="_blank">Staff Portal</a>
-        </div>
+        </nav>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://eskooly.com/bb/StudentPortal/" target="_blank">Student Portal</a>
+            <a href="https://eskooly.com/bb/EmployeePortal/" target="_blank">Staff Portal</a>
+        </nav>
     </header>
 
     <div class="container">
@@ -106,5 +177,16 @@
 
         <a href="apply.html" class="cta-button">Apply Now</a>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            if (navMenu.style.display === "flex") {
+                navMenu.style.display = "none";
+            } else {
+                navMenu.style.display = "flex";
+            }
+        }
+    </script>
 </body>
 </html>
